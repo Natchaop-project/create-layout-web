@@ -1,0 +1,92 @@
+/* ลบเส้นจางๆของ nav-tabs หรือ border-bottom ที่ติดมา */
+.custom-tabs,
+.custom-tabs .nav-link {
+  border: none !important;
+  box-shadow: none !important;
+}
+span {
+  color: #c4c4c4;
+  font-weight: 300;
+}
+/* ปรับแต่งเมนู */
+.custom-tabs {
+  position: relative;
+  display: flex;
+  gap: 12px;
+  border-bottom: none; /* ตัดเส้นล่างที่ Bootstrap เพิ่มมา */
+}
+
+.custom-tabs .nav-link {
+  position: relative;
+  color: #6c757d;
+  background: transparent;
+  border: none;
+  padding: 6px 12px;
+  transition: color 0.25s ease;
+}
+
+.custom-tabs .nav-link:hover {
+  color: #dc3545;
+}
+
+/* active แบบมีเส้นแดง animation */
+.custom-tabs .nav-link.active {
+  color: #dc3545;
+}
+
+.custom-tabs .nav-link::after {
+  content: "";
+  position: absolute;
+  left: 50%;
+  bottom: 0;
+  height: 2px;
+  width: 0;
+  background-color: #dc3545;
+  transform: translateX(-50%);
+  transition: width 0.3s ease-in-out;
+}
+
+.custom-tabs .nav-link.active::after {
+  width: 100%;
+}
+
+span{
+    font-weight: 600;
+}
+@media (max-width: 768px) {
+  .editbar-header {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .tab-scroll-wrapper {
+    width: 100%;
+    margin-bottom: 0.5rem;
+  }
+
+  .editbar-action {
+    width: 100%;
+    display: flex;
+    justify-content: flex-start;
+  }
+
+  .divider {
+    display: none;
+  }
+
+  .custom-tabs .nav-link {
+    font-size: 0.9rem;
+    padding: 0.4rem 0.6rem;
+  }
+}
+
+@media (max-width: 576px) {
+  .custom-tabs .nav-link {
+    font-size: 0.8rem;
+  }
+
+  .editbar-wrapper {
+    padding: 0.75rem;
+  }
+}
+

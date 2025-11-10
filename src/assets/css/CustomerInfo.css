@@ -1,0 +1,67 @@
+.box-total{
+    border-left: 1px solid #ccc;
+}
+.customer-info {
+  background-color: #fff;
+  padding: 1rem;
+  border-radius: 8px;
+}
+
+/* ✅ ตาราง responsive */
+.table-responsive {
+  overflow-x: auto;
+  -webkit-overflow-scrolling: touch;
+  border-radius: 6px;
+}
+
+.table {
+  min-width: 800px; /* บังคับให้เลื่อนเมื่อจอแคบ */
+  font-size: 0.95rem;
+}
+
+/* ✅ กล่องสรุปด้านล่าง */
+.summary-card {
+  background-color: #f8f9fa;
+  border-left: 1px solid #e0e0e0;
+  border-radius: 6px;
+  padding: 0.75rem 1rem;
+  height: 100%;
+}
+
+.summary-card p {
+  margin: 0.25rem 0;
+  font-size: 0.95rem;
+}
+
+/* ✅ Responsive design */
+@media (max-width: 768px) {
+  .customer-info {
+    padding: 0.75rem;
+  }
+
+  .table {
+    font-size: 0.85rem;
+  }
+
+  .summary-card p {
+    font-size: 0.85rem;
+  }
+
+  .summary-card {
+    padding: 0.5rem 0.75rem;
+  }
+}
+
+@media (max-width: 576px) {
+  .table {
+    min-width: 600px;
+  }
+
+  .summary-box {
+    flex-direction: column;
+  }
+
+  .summary-card {
+    margin-bottom: 0.5rem;
+  }
+}

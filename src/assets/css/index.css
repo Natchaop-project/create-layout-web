@@ -1,0 +1,9 @@
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+Thai:wght@100..900&display=swap');
+
+body{
+  font-family: "Noto Sans Thai", sans-serif;
+  font-weight: 500;
+  width: 80%;
+  margin: 0 auto;
+  max-width: 3000px;
+}
