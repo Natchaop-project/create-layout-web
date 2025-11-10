@@ -2,6 +2,8 @@ import EditBar from '../components/EditBar';
 import "../assets/css/CreatePage.css";
 import { useState, useEffect } from 'react';
 
+import { motion } from "framer-motion";
+
 function CreatePage() {
     const [currentTime, setCurrentTime] = useState("");
     const [currentDate, setCurrentDate] = useState("");
@@ -15,7 +17,11 @@ function CreatePage() {
     }, []);
 
     return (
-        <div className="container-fluid createpage-container py-3 my-4">
+        <motion.div
+            initial={{ opacity: 0, y: -50 }}   
+            animate={{ opacity: 1, y: 0 }}     
+            transition={{ duration: 0.5 }}     
+            className="container-fluid createpage-container py-3 my-4">
             <div className="row g-3 doc-form">
 
                 {/* วันที่เอกสาร */}
@@ -124,7 +130,7 @@ function CreatePage() {
             </div>
 
             <EditBar />
-        </div>
+        </motion.div>
     );
 }
 
